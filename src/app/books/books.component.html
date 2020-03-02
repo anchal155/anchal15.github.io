@@ -1,0 +1,24 @@
+<div class="container" style="text-align:center">
+    <div class="row" style="text-align:center;">
+    <div class="col-md-12" style="font-size:22px">All Books</div>
+    <br><br><br><br>
+    </div>
+    <div class="row" style="text-align:center" *ngIf="allBooks?.length > 0">
+    <div  *ngFor="let books of allBooks| paginate: config" class="col-md-4"> <!--structual directive called-->
+    
+        <div class="card bg-dark text-white card-block" style="border-style:none;">
+            <img class="card-img" src="../../assets/redbook.png">
+            <div class="card-img-overlay">
+            <h5 class="card-title" style="margin-top:15%;font-size:medium;">{{books.name | uppercase}}</h5>
+            <div *ngFor="let author of books.authors">Released On: {{books.released | date}}<br/>BY:{{author}}
+            
+            <br/><br/>
+            <a [routerLink]="['/books',books.url.substring(books.url.lastIndexOf('/') + 1)]" class="btn btn-primary">Read</a>
+            </div>
+        </div> 
+        </div>
+    <br/>
+    </div>
+    </div>
+    <pagination-controls (pageChange)="pageChange($event)" class="pagination justify-content-center"  aria-label="Previous"  aria-hidden="true"  aria-label="Next"aria-hidden="true"></pagination-controls>
+    </div>

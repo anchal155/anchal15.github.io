@@ -1,0 +1,22 @@
+<div class="card" id="showdiv" *ngIf="house" > <!--structual directive called for condition-->
+    <h3 class="card-header" style="text-align:center">&nbsp;{{house?.name}}</h3>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Region : &nbsp;{{house?.region}}</li>
+      <li class="list-group-item">URL : &nbsp;{{house?.url}}</li>
+      <li class="list-group-item">Coat of Arms : &nbsp;{{house?.coatOfArms}}</li>
+      <li class="list-group-item">Words : &nbsp;{{house?.words}}</li>
+      <li class="list-group-item" *ngFor="let t of house?.titles">Titles : &nbsp;{{t}}</li>
+      <li class="list-group-item" *ngFor="let s of house?.seats">Seats : &nbsp;{{s}}</li>
+      <li class="list-group-item">CurrentLord : &nbsp;{{house?.currentLord}}</li>
+      <li class="list-group-item">Heir : &nbsp;{{house?.heir}}</li>
+      <li class="list-group-item">Overlord : &nbsp;{{house?.overlord}}</li>
+      <li class="list-group-item">Founded : &nbsp;{{house?.founded}}</li>
+      <li class="list-group-item">Founder : &nbsp;{{house?.founder}}</li>
+      <li class="list-group-item">DiedOut : &nbsp;{{house?.diedOut}}</li>
+      <li class="list-group-item" *ngFor="let a of house?.ancestralWeapons">Ancestral-Weapons : &nbsp;{{a}}</li>
+      <li class="list-group-item" *ngFor="let c of house?.cadetBranches">Cadet-Branches : &nbsp;{{c}}</li>
+      <li class="list-group-item" *ngFor="let s of house?.swornMembers">Sworn-Members : &nbsp;{{s}}</li>
+  </ul>
+  </div>
+</div>

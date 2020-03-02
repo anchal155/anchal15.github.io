@@ -1,0 +1,19 @@
+<div class="card" id="showdiv" *ngIf="character" ><!--structural directive called-->
+    <h3 class="card-header" style="text-align: center;"> Character Name : &nbsp;{{character?.name}}</h3>
+  <div class="card-body">
+    <ul class="list-group list-group-flush" style="text-align: left;">
+      <li class="list-group-item">URL : &nbsp;{{character?.url}}</li>
+      <li class="list-group-item">Gender : &nbsp;{{character?.gender}}</li>
+      <li class="list-group-item">Culture : &nbsp;{{character?.culture}}</li>
+      <li class="list-group-item" *ngFor="let aliase of character?.aliases">Aliase: &nbsp;{{aliase}}</li>
+      <li class="list-group-item" *ngFor="let t of character?.titles">Titles : &nbsp;{{t}}</li>
+      <li class="list-group-item" *ngFor="let allegiance of character?.allegiances">Allegiances : &nbsp;{{allegiance}}</li>
+      <li class="list-group-item">Died : &nbsp;{{character?.died}}</li>
+      <li class="list-group-item">Father : &nbsp;{{character?.father}}</li>
+      <li class="list-group-item">Mother : &nbsp;{{character?.mother}}</li>
+      <li class="list-group-item">Spouse : &nbsp;{{character?.spouse}}</li>
+      <li class="list-group-item" *ngFor="let c of character?.tvSeries">TV-Series : &nbsp;{{c}}</li>
+      <li class="list-group-item" *ngFor="let s of character?.playedBy">Played-By : &nbsp;{{s}}</li>
+  </ul>
+  </div>
+</div>

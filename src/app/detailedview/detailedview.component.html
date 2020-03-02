@@ -1,0 +1,13 @@
+<div class="card" id="showdiv" *ngIf="book" > <!--structual directive called-->
+    <h3 class="card-header" style="text-align: center;"> Title : &nbsp;{{book?.name}}</h3>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">URL : &nbsp;{{book?.url}}</li>
+      <li class="list-group-item">ISBN CODE : &nbsp;{{book?.isbn}}</li>
+      <li class="list-group-item">NumberOfPages : &nbsp;{{book?.numberOfPages}}</li>
+      <li class="list-group-item">Published By : &nbsp;{{book?.publisher}}</li>
+      <li class="list-group-item">Country : &nbsp;{{book?.country}}</li>
+      <li class="list-group-item">Media Type : &nbsp;{{book?.mediaType}}</li>
+  </ul>
+  </div>
+</div>
